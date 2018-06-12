@@ -10,8 +10,8 @@ $succes = "Login lykkedes";
 $test = "Dette er en test";
 
 //Henter værdierne fra loginform.php
-$Brugernavn = $_POST['Brugernavn']
-$Kodeord = $_POST['Kodeord'];
+$Brugernavn = $_POST['Bruger']
+$Kodeord = $_POST['Kode'];
 
 //Beskytter mod MYSQL injections
 $Brugernavn = stripcslashes($Brugernavn);
@@ -29,6 +29,16 @@ mysql_select("login") //?????
 $result = mysql_query("select * from [DB Brugere] where Brugernavn = '$Brugernavn' and password = '$Kodeord'");
 or die($fejl)
 $row = mysql_fetch_array($result);
+
+
+//Hvis brugernavn eller password er tom
+if (empty($Kodeord)){
+   echo "Du mangler at udfylde Kodeord";
+   exit();
+
+if (empty($Brugernavn)){
+    header("Du mangler at udfylde brugernavn");
+    exit();
 
 
 //If statement der sikre at brugeren eksistere
