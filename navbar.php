@@ -6,19 +6,22 @@
 <body>
 
 
-<div class="topbar">
-       </div>
 
-<ul> 
-        <li><a href="index.php">Hjem</a></li>
-        <li><a href="kontakt.php">Kontakt</a></li>
-        <li><a href="Forum.php">Forum</a></li> 
-        <li><a href="gaestebog.php">Gæstebog</a></li> 
-        <li><a href="profil.php">Profil</a></li> 
-        <li><a href="login.php"Login</a></li> 
-        <li><a href="opret.php">Opret konto</a></li> 
- </ul>
-      
+
+<div class="topbar"></div>
+
+<div class="bar"> 
+        <span><a href="index.php">Hjem</a></span>
+        <span><a href="kontakt.php">Kontakt</a></span>
+        <span><a href="Forum.php">Forum</a></span> 
+        <span><a href="gaestebog.php">Gæstebog</a></span> 
+        <span><a href="profil.php">Profil</a></span> 
+        <span><a href="login.php">Login</a></span>
+        <span><a href="opret.php">Opret</a></span> 
+</div>
+  
+
+
 
 
 </body>

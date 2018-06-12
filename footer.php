@@ -1,0 +1,1 @@
+<footer>Copyright &copy; af Kenneth og Jakob</footer>

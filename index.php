@@ -5,12 +5,12 @@ include 'navbar.php';
 <!DOCTYPE html>
 <html>
 <head>
-<title>Page Title</title>
+<title>Merc-Portalen</title>
 </head>
 <body>
 
-<h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
+<h1>Velkommen til Merc-Portalen!</h1>
+<p>-Et dansk forum</p>
 
 </body>
 </html> 
