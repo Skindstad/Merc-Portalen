@@ -1,3 +1,7 @@
+<?php 
+include 'navbar.php';
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,3 +14,7 @@
 
 </body>
 </html> 
+
+<?php 
+include 'footer.php';
+?>
