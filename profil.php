@@ -2,17 +2,23 @@
 
 include'navbar.php';
 //include_once 'DBh.php'
-
+include'footer.php';
 ?>
 
 <body>
 
-<div>
-<img src="https://www.hooked4pets.dk/images/design/billeder/slider_forsiden_photo11.jpg">
+<link rel="stylesheet" type="text/css" href="profilstyle.css">
+ 
+<div class="fondation">
+
+<div id="layout">
+
+<div class="profilBillede">
+<img class="billede" src="https://www.hooked4pets.dk/images/design/billeder/slider_forsiden_photo11.jpg">
 </div>
 <div>
 <h2>Dit navn</h2>
-<div>
+</div>
 <br>
 <div>
 <h3>Om dig<h3>
@@ -25,7 +31,9 @@ include'navbar.php';
 
 </div>
 
+</div>
 
 
+</div>
 
 <body>
