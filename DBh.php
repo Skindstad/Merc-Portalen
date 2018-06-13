@@ -2,11 +2,11 @@
 <?php
 
 $servername = "localhost";
-$username = "merc";
-$password = "root";
-$dbname = "merc-portalen"
+$username = "root";
+$password = "";
+$dbname = "merc"
 
-$conn = mysqli_connect($servername, $usernavn, $password, $dbname);
+$conn = mysqli_connect($servername, $username, $password, $dbname);
 
 
 ?>
