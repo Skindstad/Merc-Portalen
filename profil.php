@@ -68,5 +68,12 @@ include 'DBh.php';
 <?php include'footer.php'; ?>
 
 
-</div>
+</div
 <body>
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+
+</html>

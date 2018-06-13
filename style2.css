@@ -1,7 +1,7 @@
 
 #fondation {
 	background-color: white;
-	margin-top: -21px;
+	margin-top: 0;
 }
 
 .fondation {
@@ -13,9 +13,9 @@
 	
 }
 .fondation h1 {
-margin-right: 500px;
-margin-left: 600px;
-
+margin-right: auto;
+margin-left: auto;
+margin-top: 0px;
 
 }
 #layout {
@@ -27,6 +27,11 @@ margin-left: 600px;
 "menu main"
 "menu right"
 "footer footer"
+}
+#grid {
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-template-rows: auto auto;
 }
 .profilbillede {
 	margin-left:8px;
@@ -50,3 +55,21 @@ width: 241px;
 .coloner {
 	display: grid;
 	grid-template-columns: auto auto;
+}
+
+.coloner h2 {
+margin-top: auto;
+margin-bottom: auto;
+}
+.coloner h4{
+margin-top: auto;
+margin-bottom: auto;
+}
+}
+.coloner p{
+	margin-top: auto;
+}
+
+.forum {
+
+}
