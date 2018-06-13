@@ -16,8 +16,8 @@
         <span><a href="Forum.php">Forum</a></span> 
         <span><a href="gaestebog.php">Gæstebog</a></span> 
         <span><a href="profil.php">Profil</a></span> 
-        <span><a href="login.php">Login</a></span>
-        <span><a href="opret.php">Opret</a></span> 
+        <span><a href="Loginform.php">Login</a></span>
+        <span><a href="opretForm.php">Opret</a></span> 
 </div>
   
 
