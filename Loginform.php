@@ -12,12 +12,12 @@ include 'navbar.php';
 <h1>Log ind!</h1>
 
 <div>
-    <form class="loginForm" action="kontaktform.php" method="post">
-        <input type="text" id="Bruger" name="Brugernavn" placeholder="Brugernavn*"> 
+    <form class="loginForm" action="login.php" method="POST">
+        <input type="text" id="bruger" name="bruger" placeholder="Brugernavn*"> 
         <br> 
-        <input type="text" id="Kode" name="Kodeord" placeholder="Kodeord*">
+        <input type="password" id="kode" name="kode" placeholder="Kodeord*">
         <br>
-        <button type="submit" id ="loginKnap" name="Send">Send</button>
+        <button type="submit" id="loginKnap" name="Send" value="Login">Send</button>
     </form>
 </div>
 
