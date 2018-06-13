@@ -28,6 +28,11 @@ margin-top: 0px;
 "menu right"
 "footer footer"
 }
+#grid {
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-template-rows: auto auto;
+}
 .profilbillede {
 	margin-left:8px;
 border: 5px #ccc solid;
@@ -50,3 +55,21 @@ width: 241px;
 .coloner {
 	display: grid;
 	grid-template-columns: auto auto;
+}
+
+.coloner h2 {
+margin-top: auto;
+margin-bottom: auto;
+}
+.coloner h4{
+margin-top: auto;
+margin-bottom: auto;
+}
+}
+.coloner p{
+	margin-top: auto;
+}
+
+.forum {
+
+}

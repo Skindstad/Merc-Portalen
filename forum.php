@@ -12,9 +12,8 @@ include 'DBh.php';
 <div class="fondation">
 <h1>Nye forums</h1>
 <div>
-	<form action="Forums.php" method="POST">
-		 <input type="radio" name="navn" value="1"> Joy Neilsen<br>
-		  <input type="radio" name="navn" value="2"> James Johnsen<br>
+	<form class="forum" action="forums.php" method="POST">
+		 <input type="text" name="navn" placeholder="1 or 2"><br>
         <input type="text" name="content" placeholder="Skive hvad du synes.">
         <br>
         <button type="submit" name="submit">Send</button>
@@ -22,7 +21,7 @@ include 'DBh.php';
 	
 </div>
 
-<div id="layout">
+<div id="grid">
 	<div>
 	</div>
 <div class="coloner">
@@ -33,7 +32,7 @@ include 'DBh.php';
 	
 	if ($resultCheck > 0) {
 		while ($row = mysqli_fetch_array($result)) {
-			echo "<div>" . $row['fuldNavn'] . "<br>" . $row['newTime'] ."<br>" . $row['content'] . "<br>" ."</div>";
+			echo "<div>" . "<h2>" . $row['fuldNavn'] . "</h2>" . "<br>" . "<h4>" . $row['newTime'] . "</h4>" ."<br>" . "<p>" . $row['content'] . "</p>". "<br>". "</div>" . "<br>" . "<br>" . "<div>" . "<form class='forum' action='comments.php' method='POST'>" . "<input type='text' name='navn' placeholder='1 or 2'>" ."<input type='text' name='content' placeholder='Skive hvad du synes.''>" . "<br>" ."<button type='submit' name='submit'>Send</button>" . "</form>" . "</div>" ;
 		}
 	}
 /*		$sql = "SELECT bruger.fuldNavn, comment.newTime, comment.content FROM comment INNER JOIN bruger ON comment.profilId=bruger.id ORDER BY newTime DESC;";
@@ -46,8 +45,6 @@ include 'DBh.php';
 		}
 	}
 */
-
-
 ?>
 </div>
 
