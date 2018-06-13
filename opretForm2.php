@@ -5,17 +5,16 @@ $sql ="INSERT INTO bruger (brugernavn, email, kodeord, fuldeNavn) VALUES('$_POST
 
 
 if (mysqli_query($conn, $sql)) {
-    echo "New record created successfully";
+    header("Location: http://localhost/Merc-Portalen/index.php");
+   // echo "Brugeren er nu oprettet i systemet!";
 } else {
-    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    echo "Der skete en fejl " . $sql . "<br>" . mysqli_error($conn);
 }
 
 
+
+
 /*
-
-
-
-
 session_start();
 
 //tilgår db

@@ -19,6 +19,10 @@ include 'navbar.php';
     </div>
 
     <div>
+        <input type="date" name="fødselsdag" placeholder="Fødselsdag">
+    </div>
+
+    <div>
         <input type="text" name="brugernavn" placeholder="Brugernavn" required>
     </div>
 

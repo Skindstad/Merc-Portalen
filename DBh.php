@@ -11,7 +11,7 @@ $conn = mysqli_connect($servername, $dbusername, $dbpass, $dbname);
 
 
 if (!$conn) {
-    die("Failed connection: ".mysqli_connect_error());
+    die("Kunne ikke logge ind: ".mysqli_connect_error());
 }
 
 ?>
