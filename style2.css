@@ -1,7 +1,7 @@
 
 #fondation {
 	background-color: white;
-	margin-top: -21px;
+	margin-top: 0;
 }
 
 .fondation {
@@ -13,9 +13,9 @@
 	
 }
 .fondation h1 {
-margin-right: 500px;
-margin-left: 600px;
-
+margin-right: auto;
+margin-left: auto;
+margin-top: 0px;
 
 }
 #layout {

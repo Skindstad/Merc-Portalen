@@ -11,6 +11,17 @@ include 'DBh.php';
  <div id="fondation">
 <div class="fondation">
 <h1>Nye forums</h1>
+<div>
+	<form action="Forums.php" method="POST">
+		 <input type="radio" name="navn" value="1"> Joy Neilsen<br>
+		  <input type="radio" name="navn" value="2"> James Johnsen<br>
+        <input type="text" name="content" placeholder="Skive hvad du synes.">
+        <br>
+        <button type="submit" name="submit">Send</button>
+	</form>
+	
+</div>
+
 <div id="layout">
 	<div>
 	</div>
@@ -25,7 +36,7 @@ include 'DBh.php';
 			echo "<div>" . $row['fuldNavn'] . "<br>" . $row['newTime'] ."<br>" . $row['content'] . "<br>" ."</div>";
 		}
 	}
-		$sql = "SELECT bruger.fuldNavn, comment.newTime, comment.content FROM comment INNER JOIN bruger ON comment.profilId=bruger.id ORDER BY newTime DESC;";
+/*		$sql = "SELECT bruger.fuldNavn, comment.newTime, comment.content FROM comment INNER JOIN bruger ON comment.profilId=bruger.id ORDER BY newTime DESC;";
 	$result = mysqli_query($conn, $sql);
 	$resultCheck = mysqli_num_rows($result);
 	
@@ -34,7 +45,7 @@ include 'DBh.php';
 			echo $row['fuldNavn'] . "<br>" . $row['newTime'] ."<br>" . $row['content'] . "<br>";
 		}
 	}
-
+*/
 
 
 ?>
