@@ -2,11 +2,14 @@
 
 include_once 'DBh.php';
 
-$navn = $_POST['navn'];
-$content = $_POST['content'];
 
-	$sql = "INSERT INTO forum (profilId, content) VALUES ('$navn', '$content');";
+
+$Sender = $_POST['Sender'];
+$forum = $_POST['forum'];
+$Content = $_POST['Content'];
+
+	$sql = "INSERT INTO comment (profilId,  forumId, content) VALUES ('$Sender','$forum', '$Content');";
 	mysqli_query($conn, $sql);
 
-	header("Location: ../Merc-Portalen/forum.php?forums=success");
+	header("Location: ../Merc-Portalen/forum.php?comments=success");
 	?>

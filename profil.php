@@ -26,7 +26,7 @@ include 'DBh.php';
 
 	if ($resultCheck > 0) {
 		while ($row = mysqli_fetch_assoc($result)) {
-			echo $row['fuldNavn'] . "<br>";
+			echo $row['fuldeNavn'] . "<br>";
 		}
 	}
 
@@ -45,19 +45,16 @@ include 'DBh.php';
 	}
 
 ?>
-<p>Fødselsdag<p>
-</div>
 <br>
-<div>
 <h3>Dine forums</h3>
 	<?php 
-	$sql = "SELECT bruger.fuldNavn, forum.time, forum.content FROM forum INNER JOIN bruger ON forum.profilId=bruger.id WHERE profilId = 1;";
+	$sql = "SELECT bruger.fuldeNavn, forum.time, forum.content FROM forum INNER JOIN bruger ON forum.profilId=bruger.id WHERE profilId = 2;";
 	$result = mysqli_query($conn, $sql);
 	$resultCheck = mysqli_num_rows($result);
 	
 	if ($resultCheck > 0) {
 		while ($row = mysqli_fetch_array($result)) {
-			echo $row['fuldNavn'] . "<br>" . $row['time'] ."<br>" . $row['content'] . "<br>";
+			echo $row['fuldeNavn'] . "<br>" . $row['time'] ."<br>" . $row['content'] . "<br>" . "<br>" ;
 		}
 	}
 ?>

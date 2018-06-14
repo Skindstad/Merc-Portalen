@@ -70,6 +70,25 @@ margin-bottom: auto;
 	margin-top: auto;
 }
 
-.forum {
-
+.forum{
+    padding:20px;
 }
+.forum .form-group{
+    padding-bottom: 15px;
+}
+
+.forum input[type="text"], .forum textarea{
+    padding:8px;
+    width:80%;
+}
+.forum button{
+    background-color: #333;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+}
+
+    .forum button:hover {
+        background: red;
+        color: #fff;
+    }
