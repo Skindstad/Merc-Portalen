@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Vært: 127.0.0.1
--- Genereringstid: 13. 06 2018 kl. 09:06:11
+-- Genereringstid: 14. 06 2018 kl. 14:52:29
 -- Serverversion: 10.1.32-MariaDB
 -- PHP-version: 7.2.5
 
@@ -30,21 +30,27 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `bruger` (
   `id` int(11) NOT NULL,
-  `fuldname` varchar(100) COLLATE utf8_danish_ci NOT NULL,
+  `fuldeNavn` varchar(100) COLLATE utf8_danish_ci NOT NULL,
   `alder` int(11) DEFAULT NULL,
   `brugernavn` varchar(50) COLLATE utf8_danish_ci NOT NULL,
-  `adgangskode` varchar(50) COLLATE utf8_danish_ci NOT NULL,
+  `kodeord` varchar(50) COLLATE utf8_danish_ci NOT NULL,
   `email` varchar(100) COLLATE utf8_danish_ci NOT NULL,
-  `fødselsdag` date DEFAULT NULL
+  `fødselsdag` date DEFAULT NULL,
+  `billede` blob
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_danish_ci;
 
 --
 -- Data dump for tabellen `bruger`
 --
 
-INSERT INTO `bruger` (`id`, `fuldname`, `alder`, `brugernavn`, `adgangskode`, `email`, `fødselsdag`) VALUES
-(1, 'Joy Neilsen', 18, 'Joysen12', 'joyPetersen', 'Joyneilsen@gmail.com', '2000-06-12'),
-(2, 'James Johnsen', 13, 'JamesJ12', 'Jomes351', 'Jamesjohnsen@gmail.com', '2005-04-28');
+INSERT INTO `bruger` (`id`, `fuldeNavn`, `alder`, `brugernavn`, `kodeord`, `email`, `fødselsdag`, `billede`) VALUES
+(1, 'Joy Neilsen', 18, 'Joysen12', 'joyPetersen', 'Joyneilsen@gmail.com', '2000-06-12', NULL),
+(2, 'James Johnsen', 13, 'JamesJ12', 'Jomes351', 'Jamesjohnsen@gmail.com', '2005-04-28', NULL),
+(3, 'Jakob Frederiksen', NULL, 'Merc', 'Merc', 'sdsaas@gmail.com', NULL, NULL),
+(4, 'kiuqweiuqw', NULL, 'qiuweiu', 'rootasdasd', 'askdjaskjd@mail.dk', NULL, NULL),
+(5, 'sadasd', NULL, 'adssadasd', 'root', 'askdjaskjd@mail.dk', NULL, NULL),
+(6, 'sadsadsafd', NULL, 'mercdsaassadasd', 'KNld,.skjf.nsdjkfa,', 'sadsasad@gmail.com', NULL, NULL),
+(7, 'sadsadsafd', NULL, 'sdasasdfad', 'root', 'sadsasad@gmail.com', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -66,7 +72,13 @@ CREATE TABLE `comment` (
 --
 
 INSERT INTO `comment` (`id`, `profilId`, `forumId`, `content`, `time`, `newTime`) VALUES
-(1, 2, 1, 'Jeg synes det samme fordi Grønne ærter er seje', '2018-06-12 11:38:11', '2018-06-12 11:44:28');
+(1, 2, 1, 'Jeg synes det samme fordi Grønne ærter er seje', '2018-06-12 11:38:11', '2018-06-12 11:44:28'),
+(2, 1, 2, 'Hey', '2018-06-13 09:43:08', '2018-06-13 09:43:08'),
+(3, 1, 2, 'Virker det', '2018-06-14 07:43:17', '2018-06-14 07:54:01'),
+(4, 3, 5, 'asdfghjklÃ¦Ã¸', '2018-06-14 07:45:22', '2018-06-14 07:54:05'),
+(15, 1, 3, '', '2018-06-14 12:05:49', '2018-06-14 12:05:49'),
+(16, 1, 3, 'sadasfdasfafaas', '2018-06-14 12:07:20', '2018-06-14 12:07:20'),
+(17, 1, 3, 'adslksafdslkjfbdsak', '2018-06-14 12:09:29', '2018-06-14 12:09:29');
 
 -- --------------------------------------------------------
 
@@ -79,15 +91,21 @@ CREATE TABLE `forum` (
   `profilId` int(11) NOT NULL,
   `content` text COLLATE utf8_danish_ci NOT NULL,
   `time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
-  `newTime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `newTime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `billede` blob
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_danish_ci;
 
 --
 -- Data dump for tabellen `forum`
 --
 
-INSERT INTO `forum` (`id`, `profilId`, `content`, `time`, `newTime`) VALUES
-(1, 1, 'Hvad er dette for en hjemmeside? Jeg synes denne side skulle hedde Grønne ærter!!!', '2018-06-12 11:22:01', '2018-06-12 11:39:32');
+INSERT INTO `forum` (`id`, `profilId`, `content`, `time`, `newTime`, `billede`) VALUES
+(1, 1, 'Hvad er dette for en hjemmeside? Jeg synes denne side skulle hedde Grønne ærter!!!', '2018-06-12 11:22:01', '2018-06-12 11:39:32', NULL),
+(2, 2, 'Hej alle sammen ', '2018-06-13 09:23:33', '2018-06-13 09:23:33', NULL),
+(3, 2, 'Jeg er har nu!', '2018-06-13 11:53:10', '2018-06-13 11:53:10', NULL),
+(4, 1, 'Jeg ville rigtig gerne have noget hjælpe?', '2018-06-13 13:38:03', '2018-06-13 18:41:48', NULL),
+(5, 1, 'Hej Hvor er i guys', '2018-06-13 18:48:08', '2018-06-13 18:48:08', NULL),
+(7, 3, 'Jeg ville rigtig gerne have noget hjÃ¦lpe?', '2018-06-14 07:32:16', '2018-06-14 07:32:16', NULL);
 
 --
 -- Begrænsninger for dumpede tabeller
@@ -123,19 +141,19 @@ ALTER TABLE `forum`
 -- Tilføj AUTO_INCREMENT i tabel `bruger`
 --
 ALTER TABLE `bruger`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- Tilføj AUTO_INCREMENT i tabel `comment`
 --
 ALTER TABLE `comment`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- Tilføj AUTO_INCREMENT i tabel `forum`
 --
 ALTER TABLE `forum`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- Begrænsninger for dumpede tabeller
