@@ -17,7 +17,7 @@ include 'DBh.php';
 <div class="fondation">
 <h1>Nye forums</h1>
 <div>
-	<!-- Her skive hvilke inputs forumet skal have. -->
+	<!-- Her skriver vi hvilke inputs forumet skal have. -->
 	<form class="forum" action="forums.php" method="POST">
 		<div class="form-group">
 		 <input type="text" name="navn" placeholder=" profil: 1 or up"><br>
@@ -37,7 +37,8 @@ include 'DBh.php';
 <div class="coloner">
 	<?php 
 	/* 
-Her laver jeg den der select hvad der skal være i forumet som navnet på personen der har lavet det, content på hvad han har lyst til at sige og tiden på hvornår den blive lavet
+
+Her laver jeg den der select hvad der skal være i forumet som f.eks. navnet på personen der har lavet det, content på hvad han har lyst til at sige og tiden på hvornår den blive lavet.
  */
 	$sql = "SELECT bruger.fuldeNavn, forum.newTime, forum.content, forum.billede FROM forum INNER JOIN bruger ON forum.profilId=bruger.id ORDER BY newTime DESC;";
 

@@ -1,6 +1,6 @@
 
 <?php
-
+//Tilgår databasen:
 $servername = "localhost";
 $dbusername = "root";
 $dbpass = "";

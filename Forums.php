@@ -2,7 +2,7 @@
 
 include_once 'DBh.php';
 
-/* Denne Inserter hvorers forums ind på databasen */
+/* Denne Inserter vores forums ind i databasen */
 
 $navn = $_POST['navn'];
 $content = $_POST['content'];
