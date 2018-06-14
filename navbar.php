@@ -9,7 +9,8 @@
 
 
 
-<div class="topbar"></div>
+<div class="topbar">
+</div>
 
 <div class="bar"> 
         <span><a href="index.php">Hjem</a></span>

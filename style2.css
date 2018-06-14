@@ -91,4 +91,11 @@ margin-bottom: auto;
     .forum button:hover {
         background: red;
         color: #fff;
-    }
+	}
+	
+
+.searchbar{
+position: absolute;
+right: 60px;
+height: 20px;
+}	

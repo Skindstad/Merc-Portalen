@@ -12,15 +12,21 @@ include 'DBh.php';
  
 <div class="fondation">
 
+<input class="searchbar" type="text" placeholder="Search.." name="search">
+
 <div id="layout">
 
+
 <div class="profilbillede">
+
+
 <img class="billede" src="https://www.hooked4pets.dk/images/design/billeder/slider_forsiden_photo11.jpg">
 </div>
 <div class="profiloplysninger">
 <h2>Dit navn:</h2>
 <h2><?php 
-	$sql = "SELECT * FROM bruger WHERE id = 1;";
+	//finder brugerens fulde navn
+	$sql = "SELECT * FROM bruger WHERE id = 2;"; 
 	$result = mysqli_query($conn, $sql);
 	$resultCheck = mysqli_num_rows($result);
 
@@ -34,6 +40,7 @@ include 'DBh.php';
 <h3>Om dig<h3>
 <p>Alder<P>
 <?php 
+	//finder brugerns alder
 	$sql = "SELECT * FROM bruger WHERE id = 1;";
 	$result = mysqli_query($conn, $sql);
 	$resultCheck = mysqli_num_rows($result);
@@ -46,9 +53,13 @@ include 'DBh.php';
 
 ?>
 <br>
+
+
+
 <h3>Dine forums</h3>
 	<?php 
-	$sql = "SELECT bruger.fuldeNavn, forum.time, forum.content FROM forum INNER JOIN bruger ON forum.profilId=bruger.id WHERE profilId = 2;";
+	//finder brugerens opslag
+	$sql = "SELECT bruger.fuldeNavn, forum.time, forum.content FROM forum INNER JOIN bruger ON forum.profilId=bruger.id WHERE profilId = 1;";
 	$result = mysqli_query($conn, $sql);
 	$resultCheck = mysqli_num_rows($result);
 	
