@@ -15,4 +15,7 @@ if (isset($_POST['Send'])) { //da knappen hedder send
 //bruger funktionen mail
 mail($mailTo, $emne, $mailInfo, $tekst);
 }
+
+
+
 ?>

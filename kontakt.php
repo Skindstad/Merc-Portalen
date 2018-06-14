@@ -11,6 +11,9 @@ include 'navbar.php';
 
 <h1>Kontakt</h1>
 
+<p>Her kan du sende en mail til udviklerne <br>
+Under udbygning...</p>
+
 <div>
     <form class="kontakt" action="kontaktform.php" method="post">
         <input type="text" name="navn" placeholder="Fulde navn*"> 
