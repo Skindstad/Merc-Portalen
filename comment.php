@@ -17,6 +17,9 @@ include 'DBh.php';
 <div class="fondation">
 <h1>Forums</h1>
 <?php
+/* 
+Her laver jeg den der select hvad der skal være i forumet som navnet på personen der har lavet det, content på hvad han har lyst til at sige og tiden på hvornår den blive lavet
+ */
 $sql = "SELECT bruger.fuldeNavn, forum.newTime, forum.content, forum.billede FROM forum INNER JOIN bruger ON forum.profilId=bruger.id WHERE forum.id = '2' ORDER BY newTime DESC;";
 
 	$result = mysqli_query($conn, $sql);
@@ -30,6 +33,7 @@ $sql = "SELECT bruger.fuldeNavn, forum.newTime, forum.content, forum.billede FRO
  ?>
 
 <div>
+	<!-- Her skive hvilke inputs comments skal have. -->
 	<?php 
 
 
@@ -42,7 +46,9 @@ $sql = "SELECT bruger.fuldeNavn, forum.newTime, forum.content, forum.billede FRO
         <button type='submit' name='submit'>Send</button>
 	</form>";
 
-
+/* 
+Her laver jeg den der select hvad der skal være i comments som content og tiden
+ */
 	$sql = "SELECT comment.content, comment.newTime  FROM comment INNER JOIN forum ON comment.forumId=forum.ID ORDER BY newTime DESC ;";
 	$result = mysqli_query($conn, $sql);
 $resultCheck = mysqli_num_rows($result);
