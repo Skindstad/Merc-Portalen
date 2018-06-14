@@ -2,7 +2,7 @@
 include 'navbar.php';
 
 //include_once 'DBh.php';
-
+/*
 $conn = mysqli_connect("localhost", "root", "", "merc");
 
 if(!empty($_POST['submit']))
@@ -26,7 +26,7 @@ if(!empty($_POST['submit']))
 
 
 
-
+*/
 
 ?>
 
@@ -34,13 +34,18 @@ if(!empty($_POST['submit']))
 <html>
 <head>
 <title>Log ind</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
 
 <h1>Log ind!</h1>
 
-<div>
-    <form class="loginForm" action="Loginform.php" method="post">
+
+
+
+
+<div id>
+    <form class="loginForm" action="login.php" method="POST">
         <input type="text" id="bruger" name="bruger" placeholder="Brugernavn*" required> 
         <br> 
         <input type="password" id="kode" name="kode" placeholder="Kodeord*" required>
