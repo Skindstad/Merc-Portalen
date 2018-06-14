@@ -2,7 +2,7 @@
 
 include_once 'DBh.php';
 
-/* Denne Inserter hvorers comments ind på databasen */
+/* Følgende kode inserter vores comments ind i databasen */
 
 $Sender = $_POST['Sender'];
 $Content = $_POST['Content'];

@@ -6,7 +6,7 @@ if(isset($_POST['brugernavn'])){
     $brugernavn=$_POST['brugernavn'];
     $kodeord=$_POST['kodeord'];
     
-    $sql="select * from bruger where brugernavn='".$brugernavn."'AND kodeord='".$kodeord."' limit 1";
+    $sql="select * from bruger where brugernavn='".$brugernavn."'AND kodeord='".$kodeord."' limit 1"; //så der kun kan være en bruger
     
     $result=mysql_query($sql);
     
