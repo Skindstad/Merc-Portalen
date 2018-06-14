@@ -37,7 +37,7 @@ $sql = "SELECT bruger.fuldeNavn, forum.newTime, forum.content, forum.billede FRO
 	echo "<form class='forum' method='POST' action='comments.php'>
 		<div class='form-group'>
 		 <input type='text' name='Sender' placeholder=' profil: 1 or up'>
-        <textarea class='Content' type='text' name='content' placeholder='Skive hvad du synes.'></textarea><br>
+        <textarea class='Content' type='text' name='Content' placeholder='Skive hvad du synes.'></textarea><br>
     </div>
         <button type='submit' name='submit'>Send</button>
 	</form>";
