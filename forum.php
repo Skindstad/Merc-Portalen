@@ -48,7 +48,7 @@ Her laver jeg den der select hvad der skal være i forumet som f.eks. navnet på
 	if ($resultCheck > 0) {
 		while ($row = mysqli_fetch_array($result)) {
 			/* Her gør jeg at du kan trykke på navnet på person commer du ind på comments for at holde forums comments fra hinanden  */
-			echo "<div>" . "<h2>" . "<a href='comment.php'>" . $row['fuldeNavn']. "</a>" . "</h2>" . "<br>" . "<h4>" . $row['newTime'] . "</h4>" . "<p>" . $row['content'] . "</p>". "<br>". "</div>" . "<br>" . "<br>"
+			echo "<div>" . "<h2>" . "<a href='comment.php'>" . $row['fuldeNavn']. "</a>" . "</h2>" . "<br>" . "<h4>" . $row['newTime'] . "</h4>" . "<p>" . $row['content'] . "</p>". "<br>". "</div>" . "<br>" . "<br>";
 }
 
 	
