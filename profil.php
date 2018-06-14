@@ -57,7 +57,7 @@ include 'DBh.php';
 	
 	if ($resultCheck > 0) {
 		while ($row = mysqli_fetch_array($result)) {
-			echo $row['fuldNavn'] . "<br>" . $row['time'] ."<br>" . $row['content'] . "<br>";
+			echo $row['fuldNavn'] . "<br>" . $row['time'] ."<br>" . $row['content'] . "<br>" . "<br>" ;
 		}
 	}
 ?>

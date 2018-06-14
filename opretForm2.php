@@ -5,7 +5,7 @@ $sql ="INSERT INTO bruger (brugernavn, email, kodeord, fuldeNavn) VALUES('$_POST
 
 
 if (mysqli_query($conn, $sql)) {
-    header("Location: http://localhost/Merc-Portalen/index.php");
+    header("Location: /Merc-Portalen/index.php");
    // echo "Brugeren er nu oprettet i systemet!";
 } else {
     echo "Der skete en fejl " . $sql . "<br>" . mysqli_error($conn);
