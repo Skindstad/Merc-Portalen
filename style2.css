@@ -1,4 +1,5 @@
 
+/* fondation er for sidens størlese så den ikke føller det helle. */
 #fondation {
 	background-color: white;
 	margin-top: 0;
@@ -18,21 +19,19 @@ margin-left: auto;
 margin-top: 0px;
 
 }
+/* layout og grid er til at lave et layout som gør at siden ser bedere ud */
 #layout {
 	display: grid;
 	grid-template-columns: 250px auto;
 	grid-template-rows: auto auto;
 	grid-template-areas:
-"header header"
-"menu main"
-"menu right"
-"footer footer"
 }
 #grid {
 	display: grid;
 	grid-template-columns: auto auto;
 	grid-template-rows: auto auto;
 }
+/* profilbillede er rammen på billedet og billedet er størelsen og berden */
 .profilbillede {
 	margin-left:8px;
 border: 5px #ccc solid;
@@ -52,6 +51,7 @@ width: 241px;
 	
 	
 }
+/* coloner er til at lave coloner ind i grid og layoutet */
 .coloner {
 	display: grid;
 	grid-template-columns: auto auto;
@@ -69,7 +69,7 @@ margin-bottom: auto;
 .coloner p{
 	margin-top: auto;
 }
-
+/* forum er til at styre størelsen på input og de ting der gå i gennem dem */
 .forum{
     padding:20px;
 }
