@@ -25,6 +25,10 @@ include 'navbar.php';
     </form>
 </div>
 
+<p>
+Eller send en mail:
+<a href="mailto:kenneth_jensen_99@hotmail.com" target="_top">her</a>
+</p>
 
 </body>
 </html> 

@@ -53,16 +53,6 @@ body{
     
   }
 
-    
-  .navbar2 {
-   
-    
-}
-
-
-/*test*/
-
-
 
 
     /*Footer*/
@@ -74,14 +64,12 @@ footer{
     padding:15px;
     }
     
-    footer:hover{
-        background-color:blueviolet;
-    }
 
     /* kontakt form*/
     .kontakt > input {
-        margin-top: 50px;
+        margin-top: 20px;
         padding: 12px;
+        
     }
     .besked{
         margin-top:50px;

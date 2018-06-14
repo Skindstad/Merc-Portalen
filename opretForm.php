@@ -15,7 +15,7 @@ include 'navbar.php';
 
 <script>
 $(document).ready(function(){
-    $("#div3").fadeIn(3000);
+    $("div3").fadeIn(3000);
     });
 </script>
 
@@ -24,10 +24,6 @@ $(document).ready(function(){
 
     <div>
         <input type="text" name="fuldeNavn" placeholder="Fulde navn" required>
-    </div>
-
-    <div>
-        <input type="date" name="fødselsdag" placeholder="Fødselsdag">
     </div>
 
     <div>

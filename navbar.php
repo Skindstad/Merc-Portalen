@@ -16,7 +16,6 @@
         <span><a href="index.php">Hjem</a></span>
         <span><a href="kontakt.php">Kontakt</a></span>
         <span><a href="forum.php">Forum</a></span> 
-        <span><a href="gaestebog.php">Gæstebog</a></span> 
         <span><a href="profil.php">Profil</a></span> 
         <span><a href="Loginform.php">Login</a></span>
         <span><a href="opretForm.php">Opret</a></span> 
